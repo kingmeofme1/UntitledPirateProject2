@@ -13,6 +13,7 @@ public class ScoreManager : MonoBehaviour
     }
     public void UpdateScore()
     {
+        //INCREASES THE SCORE BY ONE ON FIXING A HOLE
         scoreIndex++;
         score.text = scoreIndex.ToString();
     }

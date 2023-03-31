@@ -25,6 +25,7 @@ public class InteractObj : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
+            //DETECTS PLAYER IF IN RANGE
             isInRange = true;
             Debug.Log("Player is in range!");
         }
@@ -34,6 +35,7 @@ public class InteractObj : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
+            // DETECTS IF THE PLAYER HAS LEFT THE RANGE/ IS OUT OF THE RANGE
             isInRange = false;
             Debug.Log("Player is no longer in range!");
         }
