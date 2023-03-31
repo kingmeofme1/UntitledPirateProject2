@@ -8,6 +8,8 @@ public class PlayerMovement : MonoBehaviour
     // InputActions
     [SerializeField]
     private InputActionReference movement;
+    [SerializeField]
+    private KeyCode runKey;
 
     // Input values
     private Vector2 movementInput;
@@ -19,11 +21,15 @@ public class PlayerMovement : MonoBehaviour
 
     // Movement values
     [SerializeField]
-    private float moveSpeed = 15f;
+    private float initialMoveSpeed = 15f;
+    [SerializeField]
+    private float runMultiplier = 1f;
     [SerializeField]
     private float collisionOffset = 0.2f;
     [SerializeField]
     private ContactFilter2D movementFilter;
+
+    private float moveSpeed;
 
     private List<RaycastHit2D> castCollisions = new List<RaycastHit2D>();
 
@@ -37,6 +43,8 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
         movementInput = movement.action.ReadValue<Vector2>();
+        // Run check
+        moveSpeed = (Input.GetKey(runKey)) ? runMultiplier * initialMoveSpeed : initialMoveSpeed;
     }
 
     void FixedUpdate()
@@ -48,7 +56,7 @@ public class PlayerMovement : MonoBehaviour
         }
         // Allow for one directional movement if trying to move diagonally and there is something blocking one direction
 
-        bool success = TryMove(movementInput);
+        bool success = TryMove(movementInput);  
 
         if (!success)
         {

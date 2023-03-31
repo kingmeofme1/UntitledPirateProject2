@@ -299,9 +299,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 5
-  delayTime: 2
+  waypointPause: 1
   waypoints:
-  - {x: 13.08, y: 5}
+  - {x: 12.62, y: 5}
   - {x: -10.53, y: 5}
   - {x: -10.25, y: -5}
   - {x: 12.6, y: -5}
@@ -364,7 +364,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 111676475}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 12.55, y: -4.84, z: -6.1385345}
+  m_LocalPosition: {x: 12.55, y: 5, z: -6.1385345}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1233,7 +1233,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movement: {fileID: 3389326284102340620, guid: ed29b6ce247c9b8408c8a54a5470d1aa, type: 3}
-  moveSpeed: 7
+  runKey: 304
+  initialMoveSpeed: 7
+  runMultiplier: 1.5
   collisionOffset: 0.02
   movementFilter:
     useTriggers: 0
