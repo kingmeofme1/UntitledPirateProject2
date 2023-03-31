@@ -21,6 +21,7 @@ public class RuleManager : MonoBehaviour
     public bool playerBreakingRules;
     public bool moneyTriggered = false;
     public BoxCollider2D leftSideCollider;
+    public BoxCollider2D rightSideCollider;
     public List<OverlapObj> listMoney;
 
     [SerializeField] float textUpMod = 50f;
@@ -50,15 +51,15 @@ public class RuleManager : MonoBehaviour
     {
         playerBreakingRules = false;
         moneyTriggered = false;
-        int newRule = Random.Range(0, stringsRules.Count - 1);
-        if(newRule == currentRule)
+
+        // Choose a new rule
+        int newRule = Random.Range(0, stringsRules.Count);
+        while(newRule == currentRule)
         {
-            currentRule++;
+            newRule = Random.Range(0, stringsRules.Count);
         }
-        else
-        {
-            currentRule = newRule;
-        }
+        currentRule = newRule;
+
         Shout();
     }
 
@@ -98,21 +99,34 @@ public class RuleManager : MonoBehaviour
                 case (int)rule.NO_MONEY:
                     CheckRuleMoney();
                     break;
+                case (int)rule.NO_RIGHT:
+                    CheckRuleRightSide();
+                    break;
             }
         }
     }
 
     private void CheckRuleLeftSide()
     {
+        CheckRuleSide(leftSideCollider);
+    }
+    
+    private void CheckRuleRightSide()
+    {
+        CheckRuleSide(rightSideCollider);
+    }
+
+    private void CheckRuleSide(BoxCollider2D sideCollider)
+    {
         Collider2D[] results = new Collider2D[15]; //15 is arbitrary
         ContactFilter2D filter = new ContactFilter2D();
         filter.NoFilter();
-        Physics2D.OverlapCollider(leftSideCollider, filter, results); //uses the actual polygon collider
+        Physics2D.OverlapCollider(sideCollider, filter, results); //uses the actual polygon collider
         for (int i = 0; i < results.Length; i++)
         {
             if (results[i] != null && results[i].TryGetComponent(out PlayerMovement player))
             {
-                Debug.Log("player on left side");
+                Debug.Log($"player on {sideCollider.name}.");
                 playerBreakingRules = true;
             }
         }
@@ -155,6 +169,6 @@ public class RuleManager : MonoBehaviour
         shoutObjectText.text = shoutText;
     }
 
-    public enum rule { NO_RUN = 0, NO_LEFT = 1, NO_MONEY = 2, NO_FISH = 3}
+    public enum rule { NO_RUN = 0, NO_LEFT = 1, NO_MONEY = 2, NO_FISH = 3, NO_RIGHT = 4}
 
 }
