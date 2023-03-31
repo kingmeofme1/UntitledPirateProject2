@@ -9,12 +9,6 @@ public class Player : MonoBehaviour
     public CircleCollider2D pCollider;
     public float speed = 1f;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
     // Update is called once per frame
     void Update()
     {
@@ -22,17 +16,21 @@ public class Player : MonoBehaviour
         {
             pBody.velocity = (new Vector2(-speed, 0));
         }
-        if (Input.GetKey(KeyCode.W))
+        else if (Input.GetKey(KeyCode.W))
         {
             pBody.velocity = (new Vector2(0, speed));
         }
-        if (Input.GetKey(KeyCode.D))
+        else if (Input.GetKey(KeyCode.D))
         {
             pBody.velocity = (new Vector2(speed, 0));
         }
-        if (Input.GetKey(KeyCode.S))
+        else if (Input.GetKey(KeyCode.S))
         {
             pBody.velocity = (new Vector2(0, -speed));
+        }
+        else
+        {
+            pBody.velocity = Vector2.zero;
         }
     }
 }
