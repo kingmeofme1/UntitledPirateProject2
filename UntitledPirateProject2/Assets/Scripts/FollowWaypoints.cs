@@ -14,7 +14,6 @@ public class FollowWaypoints : MonoBehaviour
     private Vector2[] waypoints;
 
     private int currentWaypointIndex = 0;
-    private float delayTimer = 0f;
 
     private bool isStopped;
 
@@ -46,7 +45,7 @@ public class FollowWaypoints : MonoBehaviour
     {
         isStopped = true;
         yield return new WaitForSeconds(waypointPause);
-        isStopped = false;
+        isStopped = false ;
     }
 
     private void OnDrawGizmos()

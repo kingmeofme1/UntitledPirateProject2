@@ -44,11 +44,9 @@ public class PlayerMovement : MonoBehaviour
         // Do nothing if idle.
         if (movementInput == Vector2.zero) 
         {
-            print("idle.");
             return;
         }
         // Allow for one directional movement if trying to move diagonally and there is something blocking one direction
-        // ideally only return a bool, no side effect
 
         bool success = TryMove(movementInput);
 
