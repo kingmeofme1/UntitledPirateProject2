@@ -16,6 +16,7 @@ public class InteractObj : MonoBehaviour
         {
             if (Input.GetKeyDown(interactkey))
             {
+                print("here1");
                 interactAction.Invoke();
             }
         }
