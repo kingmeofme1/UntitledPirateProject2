@@ -27,10 +27,8 @@ public class HoleManager : MonoBehaviour
 
     public void IsFixed(int holeID) //fixes hole, gets a new hole!
     {
-        print("here2");
         if(holeID == activeHole && holeList[holeID].TryGetComponent(out SpriteRenderer spriteRenderer))
         {
-            print("here3");
             spriteRenderer.sprite = holeFixed;
             scoreManager.UpdateScore();
             int nextHole = Random.Range(0, holeList.Count - 1); //picks a random hole, -1 for the case of being a dupe.
@@ -46,7 +44,6 @@ public class HoleManager : MonoBehaviour
         }
         else
         {
-            print("here3.2");
             Debug.Log("wrong hole!");
         }
     }

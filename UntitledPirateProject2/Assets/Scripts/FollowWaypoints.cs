@@ -46,7 +46,7 @@ public class FollowWaypoints : MonoBehaviour
     {
         isStopped = true;
         yield return new WaitForSeconds(waypointPause);
-        isStopped = false ;
+        isStopped = false;
     }
 
     private void OnDrawGizmos()
