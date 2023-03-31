@@ -11,6 +11,7 @@ public class HoleManager : MonoBehaviour
     public List<GameObject> holeList;
     public int activeHole = 0;
     public ScoreManager scoreManager;
+    public RuleManager ruleManager;
 
     private void Start()
     {
@@ -27,7 +28,7 @@ public class HoleManager : MonoBehaviour
 
     public void IsFixed(int holeID) //fixes hole, gets a new hole!
     {
-        if(holeID == activeHole && holeList[holeID].TryGetComponent(out SpriteRenderer spriteRenderer))
+        if(holeID == activeHole && holeList[holeID].TryGetComponent(out SpriteRenderer spriteRenderer)) //check we fixed an actually broken hole
         {
             spriteRenderer.sprite = holeFixed;
             scoreManager.UpdateScore();
@@ -41,6 +42,7 @@ public class HoleManager : MonoBehaviour
                 activeHole = nextHole;
             }
             ActivateHole();
+            ruleManager.ResetRule(); //update's the rules manager to have a new rule
         }
         else
         {
