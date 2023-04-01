@@ -16,6 +16,11 @@ public class RuleManager : MonoBehaviour
     public List<string> stringsRules;
     public List<string> stringsBarks;
     public List<string> stringsTaped;
+    public List<AudioSource> audiosRules; //unimplemented
+    public List<AudioSource> audiosBarks;
+    public List<AudioSource> audiosTaped; //unimplemented
+    public bool wasAudioPlayed = false;
+
 
     [SerializeField] private Transform playerTransform;
     [SerializeField] private PlayerMovement playerMovement;
@@ -73,7 +78,7 @@ public class RuleManager : MonoBehaviour
     public void ResetRule() //called when a hole is plugged
     {
         ExitRule();
-
+        wasAudioPlayed = false; //reset audio
         int newRule = Random.Range(0, stringsRules.Count);
         while(newRule == currentRule)
         {
@@ -268,6 +273,7 @@ public class RuleManager : MonoBehaviour
     private void ShoutBark() //shouts a random bark/quip when player breaks rule
     {
         DisplayShoutText(stringsBarks[Random.Range(0, stringsBarks.Count)]);
+        PlayShoutAudio(audiosBarks[Random.Range(0, audiosBarks.Count)]);
     }
 
     private void ShoutTaped()
@@ -279,6 +285,16 @@ public class RuleManager : MonoBehaviour
     private void DisplayShoutText(string shoutText)
     {
         shoutObjectText.text = shoutText;
+    }
+
+    private void PlayShoutAudio(AudioSource shoutAudio)
+    {
+        if (!wasAudioPlayed)
+        {
+            wasAudioPlayed = true;
+            shoutAudio.Play();
+        }
+        
     }
     #endregion
 
