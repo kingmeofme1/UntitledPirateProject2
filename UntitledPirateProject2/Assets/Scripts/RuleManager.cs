@@ -13,16 +13,21 @@ public class RuleManager : MonoBehaviour
     public List<string> stringsBarks;
     public List<string> stringsTaped;
 
+    public Transform playerTransform;
+
     public GameObject captain;
     public GameObject shoutObject;
     public TMP_Text shoutObjectText;
     public Camera theCamera;
 
-    public bool playerBreakingRules;
-    public bool moneyTriggered = false;
+    private bool playerBreakingRules;
+    private bool moneyTriggered = false;
+    [Header("Rule-specific")]
     public BoxCollider2D leftSideCollider;
     public BoxCollider2D rightSideCollider;
     public List<OverlapObj> listMoney;
+
+    private Vector3 lastPlayerPosition;
 
     [SerializeField] float textUpMod = 50f;
     [SerializeField] float textWaveSpeed = 5f;
@@ -49,10 +54,8 @@ public class RuleManager : MonoBehaviour
 
     public void ResetRule() //called when a hole is plugged
     {
-        playerBreakingRules = false;
-        moneyTriggered = false;
+        ExitRule();
 
-        // Choose a new rule
         int newRule = Random.Range(0, stringsRules.Count);
         while(newRule == currentRule)
         {
@@ -60,8 +63,52 @@ public class RuleManager : MonoBehaviour
         }
         currentRule = newRule;
 
+        InitializeRule();
         Shout();
     }
+
+    // -- Things that only need to be done once per rule are here.
+    private void InitializeRule()
+    {
+        switch (currentRule)
+        {
+            case (int)rule.NO_RUN:
+                break;
+            case (int)rule.NO_LEFT:
+                 leftSideCollider.gameObject.SetActive(true);
+                break;
+            case (int)rule.NO_MONEY:
+                break;
+            case (int)rule.NO_RIGHT:
+                rightSideCollider.gameObject.SetActive(true);
+                break;
+            case (int)rule.ANTHEM:
+                lastPlayerPosition = playerTransform.position;
+                break;
+        }
+    }
+
+    private void ExitRule()
+    {
+        playerBreakingRules = false;
+        switch (currentRule)
+        {
+            case (int)rule.NO_RUN:
+                break;
+            case (int)rule.NO_LEFT:
+                leftSideCollider.gameObject.SetActive(false);
+                break;
+            case (int)rule.NO_MONEY:
+                moneyTriggered = false;
+                break;
+            case (int)rule.NO_RIGHT:
+                rightSideCollider.gameObject.SetActive(false);
+                break;
+            case (int)rule.ANTHEM:
+                break;
+        }
+    }
+
 
     private void Shout()
     {
@@ -102,8 +149,21 @@ public class RuleManager : MonoBehaviour
                 case (int)rule.NO_RIGHT:
                     CheckRuleRightSide();
                     break;
+                case (int)rule.ANTHEM:
+                    CheckRuleAnthem();
+                    break;
             }
         }
+    }
+
+    private void CheckRuleAnthem()
+    {
+        if (lastPlayerPosition != playerTransform.position)
+        {
+            playerBreakingRules = true;
+        }
+        
+        lastPlayerPosition = playerTransform.position;
     }
 
     private void CheckRuleLeftSide()
@@ -169,6 +229,6 @@ public class RuleManager : MonoBehaviour
         shoutObjectText.text = shoutText;
     }
 
-    public enum rule { NO_RUN = 0, NO_LEFT = 1, NO_MONEY = 2, NO_FISH = 3, NO_RIGHT = 4}
+    public enum rule { NO_RUN = 0, NO_LEFT = 1, NO_MONEY = 2, NO_FISH = 3, NO_RIGHT = 4, ANTHEM = 5}
 
 }
