@@ -9,6 +9,7 @@ public class RuleManager : MonoBehaviour
     private float timeOfLastShout = -10f; //just means we immediately get a shout
 
     public int currentRule = 0;
+    public float timeToEscapeDuctTape;
     public List<string> stringsRules;
     public List<string> stringsBarks;
     public List<string> stringsTaped;
@@ -21,8 +22,10 @@ public class RuleManager : MonoBehaviour
     public Camera theCamera;
 
     private bool playerBreakingRules;
-    private bool moneyTriggered = false;
+    private bool isCaptainTaped;
+
     [Header("Rule-specific")]
+    private bool moneyTriggered = false;
     public BoxCollider2D leftSideCollider;
     public BoxCollider2D rightSideCollider;
     public List<OverlapObj> listMoney;
@@ -32,25 +35,34 @@ public class RuleManager : MonoBehaviour
     [SerializeField] float textUpMod = 50f;
     [SerializeField] float textWaveSpeed = 5f;
 
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
     // Update is called once per frame
     void Update()
     {
-        CheckRuleBreaks();
         if(Time.time - timeOfLastShout > shoutDelay)
         {
             Shout();
         }
         Vector3 textPos = theCamera.WorldToScreenPoint(captain.transform.position);
-        //shoutObject.transform.SetPositionAndRotation(textPos, Quaternion.identity);
         shoutObject.transform.SetPositionAndRotation(new Vector3(textPos.x + 3 * Mathf.Sin(textWaveSpeed * Time.time), textPos.y + textUpMod, textPos.z), Quaternion.identity);
+
+        if (!isCaptainTaped)
+            CheckRuleBreaks();
     }
+
+    public void TapeCaptain()
+    {
+        print("TAPED!");
+        isCaptainTaped = true;
+        StartCoroutine(nameof(EscapeDuctTape));
+    }
+
+    private IEnumerator EscapeDuctTape()
+    {
+        yield return new WaitForSeconds(timeToEscapeDuctTape);
+        isCaptainTaped = false;
+    }
+
+    #region Rules
 
     public void ResetRule() //called when a hole is plugged
     {
@@ -109,24 +121,6 @@ public class RuleManager : MonoBehaviour
         }
     }
 
-
-    private void Shout()
-    {
-        timeOfLastShout = Time.time;
-        if (playerBreakingRules)
-        {
-            ShoutBark();
-        } else if (false)
-        {
-            ShoutTaped();
-        }
-        else
-        {
-            ShoutRule();
-        }
-
-    }
-
     private void CheckRuleBreaks()
     {
         if (!playerBreakingRules) //if they have broken the rules, no need to keep checking til this is reset
@@ -160,6 +154,7 @@ public class RuleManager : MonoBehaviour
     {
         if (lastPlayerPosition != playerTransform.position)
         {
+            Debug.Log("Player did not stay still for the anthem");
             playerBreakingRules = true;
         }
         
@@ -208,6 +203,27 @@ public class RuleManager : MonoBehaviour
         }
     }
 
+    #endregion
+
+    #region Shouts
+    private void Shout()
+    {
+        timeOfLastShout = Time.time;
+        if (playerBreakingRules)
+        {
+            ShoutBark();
+        }
+        else if (isCaptainTaped)
+        {
+            ShoutTaped();
+        }
+        else
+        {
+            ShoutRule();
+        }
+
+    }
+
     private void ShoutRule() //shouts current rule
     {
         DisplayShoutText(stringsRules[currentRule]);
@@ -228,6 +244,7 @@ public class RuleManager : MonoBehaviour
     {
         shoutObjectText.text = shoutText;
     }
+    #endregion
 
     public enum rule { NO_RUN = 0, NO_LEFT = 1, NO_MONEY = 2, NO_FISH = 3, NO_RIGHT = 4, ANTHEM = 5}
 
