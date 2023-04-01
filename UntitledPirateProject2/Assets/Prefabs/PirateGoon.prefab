@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 3170398778695783488}
   - component: {fileID: 3170398778695783487}
   - component: {fileID: 3170398778695783491}
-  - component: {fileID: -8812184272270599066}
+  - component: {fileID: -8367706284204625709}
   m_Layer: 0
   m_Name: PirateGoon
   m_TagString: Untagged
@@ -98,6 +98,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f397f74baec0fa47a402b7400bbe10a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spriteRenderer: {fileID: 3170398778695783489}
+  sprites:
+  - {fileID: 1158996290619061236, guid: 3c903fbfb43256946ad291f9fe3effad, type: 3}
+  - {fileID: -4353149647159254427, guid: 3c903fbfb43256946ad291f9fe3effad, type: 3}
+  - {fileID: -2096166493415184392, guid: 3c903fbfb43256946ad291f9fe3effad, type: 3}
   ruleManager: {fileID: 0}
   player: {fileID: 0}
   waypointScript: {fileID: 3170398778695783487}
@@ -118,6 +123,11 @@ MonoBehaviour:
   waypoints:
   - {x: -11, y: 3}
   - {x: -11, y: -3}
+  spriteRenderer: {fileID: 3170398778695783489}
+  sprites:
+  - {fileID: 1158996290619061236, guid: 3c903fbfb43256946ad291f9fe3effad, type: 3}
+  - {fileID: -4353149647159254427, guid: 3c903fbfb43256946ad291f9fe3effad, type: 3}
+  - {fileID: -2096166493415184392, guid: 3c903fbfb43256946ad291f9fe3effad, type: 3}
 --- !u!50 &3170398778695783491
 Rigidbody2D:
   serializedVersion: 4
@@ -139,8 +149,8 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!61 &-8812184272270599066
-BoxCollider2D:
+--- !u!60 &-8367706284204625709
+PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -162,6 +172,13 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 2, y: 2}
-  m_EdgeRadius: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0.11525726, y: 0.9695394}
+      - {x: -1.1121912, y: 1.3059647}
+      - {x: -0.6812496, y: -0.026436567}
+      - {x: -1.014615, y: -1.2601037}
+      - {x: 0.012763977, y: -1.0092723}
+      - {x: 1.2223129, y: -1.2396135}
+      - {x: 0.7486515, y: -0.1509285}
+      - {x: 1.2587452, y: 1.2033796}
