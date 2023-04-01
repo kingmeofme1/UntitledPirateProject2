@@ -98,6 +98,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f397f74baec0fa47a402b7400bbe10a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spriteRenderer: {fileID: 3170398778695783489}
+  sprites:
+  - {fileID: 1158996290619061236, guid: 3c903fbfb43256946ad291f9fe3effad, type: 3}
+  - {fileID: -4353149647159254427, guid: 3c903fbfb43256946ad291f9fe3effad, type: 3}
+  - {fileID: -2096166493415184392, guid: 3c903fbfb43256946ad291f9fe3effad, type: 3}
   ruleManager: {fileID: 0}
   player: {fileID: 0}
   waypointScript: {fileID: 3170398778695783487}
@@ -118,6 +123,11 @@ MonoBehaviour:
   waypoints:
   - {x: -11, y: 3}
   - {x: -11, y: -3}
+  spriteRenderer: {fileID: 3170398778695783489}
+  sprites:
+  - {fileID: 1158996290619061236, guid: 3c903fbfb43256946ad291f9fe3effad, type: 3}
+  - {fileID: -4353149647159254427, guid: 3c903fbfb43256946ad291f9fe3effad, type: 3}
+  - {fileID: -2096166493415184392, guid: 3c903fbfb43256946ad291f9fe3effad, type: 3}
 --- !u!50 &3170398778695783491
 Rigidbody2D:
   serializedVersion: 4
