@@ -23,4 +23,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/SegoulScene.unity
     guid: 82c4200ac0358254a9e74e85fa7432b8
+  - enabled: 1
+    path: Assets/Scenes/Cutscene1Intro.unity
+    guid: 2474dd62d91dbab449a170f13a89ce26
   m_configObjects: {}

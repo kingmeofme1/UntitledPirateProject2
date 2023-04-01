@@ -26,6 +26,6 @@ public class MainMenuManager : MonoBehaviour
 
     public void StartGame()
     {
-        SceneManager.LoadScene("KingScene");
+        SceneManager.LoadScene("Cutscene1Intro");
     }
 }

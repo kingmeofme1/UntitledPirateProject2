@@ -594,6 +594,18 @@ PrefabInstance:
       propertyPath: ruleManager
       value: 
       objectReference: {fileID: 1716080575}
+    - target: {fileID: 3170398778695783488, guid: 518def0ade905034cb681bd68e189bb6, type: 3}
+      propertyPath: sprites.Array.data[0]
+      value: 
+      objectReference: {fileID: 5454569466368052684, guid: 1f226ee3fa629e24288bf71d78369491, type: 3}
+    - target: {fileID: 3170398778695783488, guid: 518def0ade905034cb681bd68e189bb6, type: 3}
+      propertyPath: sprites.Array.data[1]
+      value: 
+      objectReference: {fileID: -4872691542434284958, guid: 1f226ee3fa629e24288bf71d78369491, type: 3}
+    - target: {fileID: 3170398778695783488, guid: 518def0ade905034cb681bd68e189bb6, type: 3}
+      propertyPath: sprites.Array.data[2]
+      value: 
+      objectReference: {fileID: 6001627642049386300, guid: 1f226ee3fa629e24288bf71d78369491, type: 3}
     - target: {fileID: 3170398778695783489, guid: 518def0ade905034cb681bd68e189bb6, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -2657,6 +2669,18 @@ PrefabInstance:
       propertyPath: ruleManager
       value: 
       objectReference: {fileID: 1716080575}
+    - target: {fileID: 3170398778695783488, guid: 518def0ade905034cb681bd68e189bb6, type: 3}
+      propertyPath: sprites.Array.data[0]
+      value: 
+      objectReference: {fileID: -3556669736044192310, guid: 47e68b48041ebc24ca203606ca6c7cf2, type: 3}
+    - target: {fileID: 3170398778695783488, guid: 518def0ade905034cb681bd68e189bb6, type: 3}
+      propertyPath: sprites.Array.data[1]
+      value: 
+      objectReference: {fileID: 607409605853999513, guid: 47e68b48041ebc24ca203606ca6c7cf2, type: 3}
+    - target: {fileID: 3170398778695783488, guid: 518def0ade905034cb681bd68e189bb6, type: 3}
+      propertyPath: sprites.Array.data[2]
+      value: 
+      objectReference: {fileID: -353709529968172686, guid: 47e68b48041ebc24ca203606ca6c7cf2, type: 3}
     - target: {fileID: 3170398778695783489, guid: 518def0ade905034cb681bd68e189bb6, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -4402,6 +4426,18 @@ PrefabInstance:
       propertyPath: ruleManager
       value: 
       objectReference: {fileID: 1716080575}
+    - target: {fileID: 3170398778695783488, guid: 518def0ade905034cb681bd68e189bb6, type: 3}
+      propertyPath: sprites.Array.data[0]
+      value: 
+      objectReference: {fileID: -3556669736044192310, guid: 47e68b48041ebc24ca203606ca6c7cf2, type: 3}
+    - target: {fileID: 3170398778695783488, guid: 518def0ade905034cb681bd68e189bb6, type: 3}
+      propertyPath: sprites.Array.data[1]
+      value: 
+      objectReference: {fileID: 607409605853999513, guid: 47e68b48041ebc24ca203606ca6c7cf2, type: 3}
+    - target: {fileID: 3170398778695783488, guid: 518def0ade905034cb681bd68e189bb6, type: 3}
+      propertyPath: sprites.Array.data[2]
+      value: 
+      objectReference: {fileID: -353709529968172686, guid: 47e68b48041ebc24ca203606ca6c7cf2, type: 3}
     - target: {fileID: 3170398778695783489, guid: 518def0ade905034cb681bd68e189bb6, type: 3}
       propertyPath: m_Sprite
       value: 
