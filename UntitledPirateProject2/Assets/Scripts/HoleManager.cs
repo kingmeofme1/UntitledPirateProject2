@@ -47,6 +47,7 @@ public class HoleManager : MonoBehaviour
         {
             waterMeterPercentage += waterPercentagePerSecond * Time.deltaTime;
             waterSlider.value = waterMeterPercentage;
+
             if (waterMeterPercentage >= 100) SceneManager.LoadScene(sceneName);
         }
     }
