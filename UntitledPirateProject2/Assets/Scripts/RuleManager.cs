@@ -44,8 +44,8 @@ public class RuleManager : MonoBehaviour
         {
             Shout();
         }
-        Vector3 textPos = theCamera.WorldToScreenPoint(captain.transform.position);
-        shoutObject.transform.SetPositionAndRotation(new Vector3(textPos.x + 3 * Mathf.Sin(textWaveSpeed * Time.time), textPos.y + textUpMod, textPos.z), Quaternion.identity);
+        //Vector3 textPos = theCamera.WorldToScreenPoint(captain.transform.position);
+        //shoutObject.transform.SetPositionAndRotation(new Vector3(textPos.x + 3 * Mathf.Sin(textWaveSpeed * Time.time), textPos.y + textUpMod, textPos.z), Quaternion.identity);
 
         if (!isCaptainTaped)
             CheckRuleBreaks();
