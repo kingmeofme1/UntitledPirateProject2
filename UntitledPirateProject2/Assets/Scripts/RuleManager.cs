@@ -144,9 +144,8 @@ public class RuleManager : MonoBehaviour
             switch (currentRule)
             {
                 case (int)rule.NO_RUN:
-                    if (Input.GetKey(KeyCode.LeftShift))
+                    if (!Input.GetKey(KeyCode.LeftShift))
                     {
-                        Debug.Log("player is runing");
                         playerBreakingRules = true;
                     }
                     break;
