@@ -6,7 +6,18 @@ using TMPro;
 public class HoleManager : MonoBehaviour
 {
     [SerializeField] private Sprite holeLeaking;
+    [SerializeField] private Sprite holeWarning;
     [SerializeField] private Sprite holeFixed;
+    private SpriteRenderer activeHoleSprite;
+
+    [Header("Water Leak")]
+    [Range(0, 100)]
+    [SerializeField] private float waterPercentagePerSecond;
+
+    [SerializeField] private float timeBeforeLeak;
+    private bool isHoleLeaking;
+    private float waterMeterPercentage;
+
 
     public List<GameObject> holeList;
     public int activeHole = 0;
@@ -26,21 +37,32 @@ public class HoleManager : MonoBehaviour
         }
     }
 
+    private void Update()
+    {
+        if (isHoleLeaking)
+            waterMeterPercentage += waterPercentagePerSecond * Time.deltaTime;
+
+        print(Mathf.Round(waterMeterPercentage));
+    }
+
+
     public void IsFixed(int holeID) //fixes hole, gets a new hole!
     {
         if(holeID == activeHole && holeList[holeID].TryGetComponent(out SpriteRenderer spriteRenderer)) //check we fixed an actually broken hole
         {
             spriteRenderer.sprite = holeFixed;
+            isHoleLeaking = false;
+
             scoreManager.UpdateScore();
-            int nextHole = Random.Range(0, holeList.Count - 1); //picks a random hole, -1 for the case of being a dupe.
-            if(nextHole == activeHole) //if it is a dupe, since we offset by 1 above, we can increment to get a distinct hole.
+
+            // pick a new hole
+            int nextHole = Random.Range(0, holeList.Count);
+            while(nextHole == activeHole)
             {
-                activeHole++;
+                nextHole = Random.Range(0, holeList.Count);
             }
-            else //if the hole was already different, we can just use it then!
-            {
-                activeHole = nextHole;
-            }
+            activeHole = nextHole;
+
             ActivateHole();
             ruleManager.ResetRule(); //update's the rules manager to have a new rule
         }
@@ -50,12 +72,22 @@ public class HoleManager : MonoBehaviour
         }
     }
 
+
     public void ActivateHole()
     {
         if(holeList[activeHole].TryGetComponent(out SpriteRenderer spriteRenderer))
         {
-            spriteRenderer.sprite = holeLeaking;
+            activeHoleSprite = spriteRenderer;
+            spriteRenderer.sprite = holeWarning;
+            StartCoroutine(nameof(DelayBeforeLeak));
         }
+    }
+
+    private IEnumerator DelayBeforeLeak()
+    {
+        yield return new WaitForSeconds(timeBeforeLeak);
+        activeHoleSprite.sprite = holeLeaking;
+        isHoleLeaking = true;
     }
 
     
