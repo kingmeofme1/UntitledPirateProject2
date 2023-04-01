@@ -70,6 +70,8 @@ public class FollowWaypoints : MonoBehaviour
 
     private void RotateSprite(Vector2 direction)
     {
+        if (sprites.Length <= 0) return;
+
         float unitAngle = CalculateAngle(direction);
         if(unitAngle < 0)
         {
