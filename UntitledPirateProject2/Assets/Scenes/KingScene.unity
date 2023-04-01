@@ -3997,6 +3997,7 @@ MonoBehaviour:
   - '*MHMPG*'
   - '*HMMHM*'
   playerTransform: {fileID: 1460221827}
+  playerMovement: {fileID: 1460221826}
   captain: {fileID: 111676475}
   shoutObject: {fileID: 1076584937}
   shoutObjectText: {fileID: 1076584938}
