@@ -9,7 +9,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField]
     private InputActionReference movement;
     [SerializeField]
-    private KeyCode runKey;
+    private KeyCode walkKey;
 
     // Input values
     private Vector2 movementInput;
@@ -21,7 +21,7 @@ public class PlayerMovement : MonoBehaviour
 
     // Movement values
     [SerializeField]
-    private float initialMoveSpeed = 15f;
+    private float walkSpeed = 15f;
     [SerializeField]
     private float runMultiplier = 1f;
     [SerializeField]
@@ -44,7 +44,7 @@ public class PlayerMovement : MonoBehaviour
     {
         movementInput = movement.action.ReadValue<Vector2>();
         // Run check
-        moveSpeed = (Input.GetKey(runKey)) ? runMultiplier * initialMoveSpeed : initialMoveSpeed;
+        moveSpeed = (Input.GetKey(walkKey)) ? walkSpeed : runMultiplier * walkSpeed;
     }
 
     void FixedUpdate()
