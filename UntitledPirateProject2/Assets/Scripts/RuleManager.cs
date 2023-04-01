@@ -7,8 +7,10 @@ public class RuleManager : MonoBehaviour
 {
     public float shoutDelay = 5.0f; //in seconds
     private float timeOfLastShout = -10f; //just means we immediately get a shout
+    private bool isAnnouncingRule;
+    [SerializeField] private float delayBeforeRuleIsApplied;
 
-    public int currentRule = 0;
+    private int currentRule = 0;
     public float timeToEscapeDuctTape;
     public List<string> stringsRules;
     public List<string> stringsBarks;
@@ -75,6 +77,15 @@ public class RuleManager : MonoBehaviour
         }
         currentRule = newRule;
 
+        StartCoroutine(nameof(AnnounceRule));
+    }
+
+    private IEnumerator AnnounceRule()
+    {
+        isAnnouncingRule = true;
+        yield return new WaitForSeconds(delayBeforeRuleIsApplied);
+        isAnnouncingRule = false;
+        
         InitializeRule();
         Shout();
     }
@@ -213,6 +224,10 @@ public class RuleManager : MonoBehaviour
         {
             ShoutBark();
         }
+        else if (isAnnouncingRule)
+        {
+            ShoutAnnouncement();
+        }
         else if (isCaptainTaped)
         {
             ShoutTaped();
@@ -225,6 +240,11 @@ public class RuleManager : MonoBehaviour
     }
 
     private void ShoutRule() //shouts current rule
+    {
+        DisplayShoutText(stringsRules[currentRule]);
+    }
+    
+    private void ShoutAnnouncement() //shouts next rule rule
     {
         DisplayShoutText(stringsRules[currentRule]);
     }

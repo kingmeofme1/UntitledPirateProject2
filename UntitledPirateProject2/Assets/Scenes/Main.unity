@@ -1258,6 +1258,18 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3170398778695783487, guid: 518def0ade905034cb681bd68e189bb6, type: 3}
+      propertyPath: gizmoColor.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3170398778695783487, guid: 518def0ade905034cb681bd68e189bb6, type: 3}
+      propertyPath: gizmoColor.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3170398778695783487, guid: 518def0ade905034cb681bd68e189bb6, type: 3}
+      propertyPath: gizmoColor.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3170398778695783487, guid: 518def0ade905034cb681bd68e189bb6, type: 3}
       propertyPath: waypoints.Array.data[0].y
       value: -7
       objectReference: {fileID: 0}
@@ -3671,7 +3683,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shoutDelay: 0.5
-  currentRule: 0
+  delayBeforeRuleIsApplied: 2
   timeToEscapeDuctTape: 2
   stringsRules:
   - run
