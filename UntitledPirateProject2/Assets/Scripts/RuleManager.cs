@@ -246,6 +246,11 @@ public class RuleManager : MonoBehaviour
     }
     #endregion
 
-    public enum rule { NO_RUN = 0, NO_LEFT = 1, NO_MONEY = 2, NO_FISH = 3, NO_RIGHT = 4, ANTHEM = 5}
+    public bool IsRulesBroken()
+    {
+        return playerBreakingRules;
+    }
 
+    public enum rule { NO_RUN = 0, NO_LEFT = 1, NO_MONEY = 2, NO_FISH = 3, NO_RIGHT = 4, ANTHEM = 5}
+    
 }

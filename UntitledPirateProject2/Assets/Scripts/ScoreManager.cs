@@ -11,10 +11,10 @@ public class ScoreManager : MonoBehaviour
     {
         score.text = scoreIndex.ToString();
     }
-    public void UpdateScore()
+    public void UpdateScore(int scoreMod)
     {
         //INCREASES THE SCORE BY ONE ON FIXING A HOLE
-        scoreIndex++;
+        scoreIndex += scoreMod;
         score.text = scoreIndex.ToString();
     }
 }

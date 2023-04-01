@@ -1,16 +1,16 @@
 fileFormatVersion: 2
-guid: 0429d603104e85440a5d4eca8d7766fa
+guid: 3c903fbfb43256946ad291f9fe3effad
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 8611564440514264555
-    second: CaptainFront
+      213: 1158996290619061236
+    second: Crew_1Front
   - first:
-      213: -8954893322661341281
-    second: CaptainSide
+      213: -4353149647159254427
+    second: Crew_1Side
   - first:
-      213: -5085999498696559913
-    second: CaptainBack
+      213: -2096166493415184392
+    second: Crew_1Back
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -124,7 +124,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: CaptainFront
+      name: Crew_1Front
       rect:
         serializedVersion: 2
         x: 0
@@ -132,20 +132,20 @@ TextureImporter:
         width: 24
         height: 32
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bedfc3d8b3c628770800000000000000
-      internalID: 8611564440514264555
+      spriteID: 4f338565cf4951010800000000000000
+      internalID: 1158996290619061236
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CaptainSide
+      name: Crew_1Side
       rect:
         serializedVersion: 2
         x: 24
@@ -153,20 +153,20 @@ TextureImporter:
         width: 24
         height: 32
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f97d045d7f3d9b380800000000000000
-      internalID: -8954893322661341281
+      spriteID: 562a4fab5718693c0800000000000000
+      internalID: -4353149647159254427
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CaptainBack
+      name: Crew_1Back
       rect:
         serializedVersion: 2
         x: 48
@@ -174,14 +174,14 @@ TextureImporter:
         width: 24
         height: 32
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7d270681766ea69b0800000000000000
-      internalID: -5085999498696559913
+      spriteID: 8f769e12eabe8e2e0800000000000000
+      internalID: -2096166493415184392
       vertices: []
       indices: 
       edges: []

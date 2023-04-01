@@ -53,11 +53,12 @@ public class HoleManager : MonoBehaviour
             spriteRenderer.sprite = holeFixed;
             isHoleLeaking = false;
 
-            scoreManager.UpdateScore();
+            scoreManager.UpdateScore(1);
 
             // pick a new hole
             int nextHole = Random.Range(0, holeList.Count);
             while(nextHole == activeHole)
+
             {
                 nextHole = Random.Range(0, holeList.Count);
             }

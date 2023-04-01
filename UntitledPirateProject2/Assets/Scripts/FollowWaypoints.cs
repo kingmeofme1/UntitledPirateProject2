@@ -60,4 +60,9 @@ public class FollowWaypoints : MonoBehaviour
                 Gizmos.DrawLine(waypoints[i], waypoints[0]);
         }
     }
+
+    public float GetMoveSpeed()
+    {
+        return moveSpeed;
+    }
 }
