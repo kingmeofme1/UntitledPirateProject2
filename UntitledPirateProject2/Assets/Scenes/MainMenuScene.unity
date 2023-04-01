@@ -213,7 +213,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   expand: 0
-  button: {fileID: 169250001}
+  theObject: {fileID: 0}
   scaleMod: 0
   maxScaleMod: 0.2
 --- !u!1 &190669819
@@ -227,6 +227,7 @@ GameObject:
   - component: {fileID: 190669820}
   - component: {fileID: 190669822}
   - component: {fileID: 190669821}
+  - component: {fileID: 190669823}
   m_Layer: 5
   m_Name: Pirate1
   m_TagString: Untagged
@@ -291,6 +292,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 190669819}
   m_CullTransparentMesh: 1
+--- !u!114 &190669823
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 190669819}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97535d415c9499943a39bd660c500160, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  expand: 0
+  theObject: {fileID: 0}
+  scaleMod: 0
+  maxScaleMod: 0.2
 --- !u!1 &256223168
 GameObject:
   m_ObjectHideFlags: 0
@@ -302,6 +319,7 @@ GameObject:
   - component: {fileID: 256223169}
   - component: {fileID: 256223171}
   - component: {fileID: 256223170}
+  - component: {fileID: 256223172}
   m_Layer: 5
   m_Name: Player
   m_TagString: Untagged
@@ -366,6 +384,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 256223168}
   m_CullTransparentMesh: 1
+--- !u!114 &256223172
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 256223168}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97535d415c9499943a39bd660c500160, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  expand: 0
+  theObject: {fileID: 0}
+  scaleMod: 0
+  maxScaleMod: 0.2
 --- !u!1 &300841977
 GameObject:
   m_ObjectHideFlags: 0
@@ -645,6 +679,7 @@ GameObject:
   - component: {fileID: 629906233}
   - component: {fileID: 629906235}
   - component: {fileID: 629906234}
+  - component: {fileID: 629906236}
   m_Layer: 5
   m_Name: Pirate1 (10)
   m_TagString: Untagged
@@ -709,6 +744,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 629906232}
   m_CullTransparentMesh: 1
+--- !u!114 &629906236
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 629906232}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97535d415c9499943a39bd660c500160, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  expand: 0
+  theObject: {fileID: 0}
+  scaleMod: 0
+  maxScaleMod: 0.2
 --- !u!1 &758478390
 GameObject:
   m_ObjectHideFlags: 0
@@ -720,6 +771,7 @@ GameObject:
   - component: {fileID: 758478391}
   - component: {fileID: 758478393}
   - component: {fileID: 758478392}
+  - component: {fileID: 758478394}
   m_Layer: 5
   m_Name: Pirate1 (9)
   m_TagString: Untagged
@@ -784,6 +836,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 758478390}
   m_CullTransparentMesh: 1
+--- !u!114 &758478394
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 758478390}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97535d415c9499943a39bd660c500160, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  expand: 0
+  theObject: {fileID: 0}
+  scaleMod: 0
+  maxScaleMod: 0.2
 --- !u!1 &977177991
 GameObject:
   m_ObjectHideFlags: 0
@@ -795,6 +863,7 @@ GameObject:
   - component: {fileID: 977177992}
   - component: {fileID: 977177994}
   - component: {fileID: 977177993}
+  - component: {fileID: 977177995}
   m_Layer: 5
   m_Name: Pirate1 (11)
   m_TagString: Untagged
@@ -859,6 +928,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 977177991}
   m_CullTransparentMesh: 1
+--- !u!114 &977177995
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 977177991}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97535d415c9499943a39bd660c500160, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  expand: 0
+  theObject: {fileID: 0}
+  scaleMod: 0
+  maxScaleMod: 0.2
 --- !u!1 &1004110879
 GameObject:
   m_ObjectHideFlags: 0
@@ -1316,6 +1401,7 @@ GameObject:
   - component: {fileID: 1204205053}
   - component: {fileID: 1204205055}
   - component: {fileID: 1204205054}
+  - component: {fileID: 1204205056}
   m_Layer: 5
   m_Name: Pirate1 (5)
   m_TagString: Untagged
@@ -1380,6 +1466,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1204205052}
   m_CullTransparentMesh: 1
+--- !u!114 &1204205056
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1204205052}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97535d415c9499943a39bd660c500160, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  expand: 0
+  theObject: {fileID: 0}
+  scaleMod: 0
+  maxScaleMod: 0.2
 --- !u!1 &1286405064
 GameObject:
   m_ObjectHideFlags: 0
@@ -1391,6 +1493,7 @@ GameObject:
   - component: {fileID: 1286405065}
   - component: {fileID: 1286405067}
   - component: {fileID: 1286405066}
+  - component: {fileID: 1286405068}
   m_Layer: 5
   m_Name: FloorHole
   m_TagString: Untagged
@@ -1455,6 +1558,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1286405064}
   m_CullTransparentMesh: 1
+--- !u!114 &1286405068
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1286405064}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97535d415c9499943a39bd660c500160, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  expand: 0
+  theObject: {fileID: 0}
+  scaleMod: 0
+  maxScaleMod: 0.2
 --- !u!1 &1312153880
 GameObject:
   m_ObjectHideFlags: 0
@@ -1635,7 +1754,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   expand: 0
-  button: {fileID: 1320523650}
+  theObject: {fileID: 0}
   scaleMod: 0
   maxScaleMod: 0.2
 --- !u!1 &1360068298
@@ -1649,6 +1768,7 @@ GameObject:
   - component: {fileID: 1360068299}
   - component: {fileID: 1360068301}
   - component: {fileID: 1360068300}
+  - component: {fileID: 1360068302}
   m_Layer: 5
   m_Name: Pirate1 (4)
   m_TagString: Untagged
@@ -1713,6 +1833,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1360068298}
   m_CullTransparentMesh: 1
+--- !u!114 &1360068302
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1360068298}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97535d415c9499943a39bd660c500160, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  expand: 0
+  theObject: {fileID: 0}
+  scaleMod: 0
+  maxScaleMod: 0.2
 --- !u!1 &1404261587
 GameObject:
   m_ObjectHideFlags: 0
@@ -1724,6 +1860,7 @@ GameObject:
   - component: {fileID: 1404261588}
   - component: {fileID: 1404261590}
   - component: {fileID: 1404261589}
+  - component: {fileID: 1404261591}
   m_Layer: 5
   m_Name: Pirate1 (6)
   m_TagString: Untagged
@@ -1788,6 +1925,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1404261587}
   m_CullTransparentMesh: 1
+--- !u!114 &1404261591
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1404261587}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97535d415c9499943a39bd660c500160, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  expand: 0
+  theObject: {fileID: 0}
+  scaleMod: 0
+  maxScaleMod: 0.2
 --- !u!1 &1410351903
 GameObject:
   m_ObjectHideFlags: 0
@@ -1875,6 +2028,7 @@ GameObject:
   - component: {fileID: 1535578361}
   - component: {fileID: 1535578363}
   - component: {fileID: 1535578362}
+  - component: {fileID: 1535578364}
   m_Layer: 5
   m_Name: Pirate1 (3)
   m_TagString: Untagged
@@ -1939,6 +2093,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1535578360}
   m_CullTransparentMesh: 1
+--- !u!114 &1535578364
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1535578360}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97535d415c9499943a39bd660c500160, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  expand: 0
+  theObject: {fileID: 0}
+  scaleMod: 0
+  maxScaleMod: 0.2
 --- !u!1 &1539248978
 GameObject:
   m_ObjectHideFlags: 0
@@ -1950,6 +2120,7 @@ GameObject:
   - component: {fileID: 1539248979}
   - component: {fileID: 1539248981}
   - component: {fileID: 1539248980}
+  - component: {fileID: 1539248982}
   m_Layer: 5
   m_Name: Pirate1 (8)
   m_TagString: Untagged
@@ -2014,6 +2185,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1539248978}
   m_CullTransparentMesh: 1
+--- !u!114 &1539248982
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1539248978}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97535d415c9499943a39bd660c500160, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  expand: 0
+  theObject: {fileID: 0}
+  scaleMod: 0
+  maxScaleMod: 0.2
 --- !u!1 &1577069592
 GameObject:
   m_ObjectHideFlags: 0
@@ -2025,6 +2212,7 @@ GameObject:
   - component: {fileID: 1577069593}
   - component: {fileID: 1577069595}
   - component: {fileID: 1577069594}
+  - component: {fileID: 1577069596}
   m_Layer: 5
   m_Name: Captain
   m_TagString: Untagged
@@ -2089,6 +2277,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1577069592}
   m_CullTransparentMesh: 1
+--- !u!114 &1577069596
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1577069592}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97535d415c9499943a39bd660c500160, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  expand: 0
+  theObject: {fileID: 0}
+  scaleMod: 0
+  maxScaleMod: 0.2
 --- !u!1 &1578991978
 GameObject:
   m_ObjectHideFlags: 0
@@ -2233,6 +2437,7 @@ GameObject:
   - component: {fileID: 1608048343}
   - component: {fileID: 1608048345}
   - component: {fileID: 1608048344}
+  - component: {fileID: 1608048346}
   m_Layer: 5
   m_Name: Pirate1 (1)
   m_TagString: Untagged
@@ -2297,6 +2502,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1608048342}
   m_CullTransparentMesh: 1
+--- !u!114 &1608048346
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1608048342}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97535d415c9499943a39bd660c500160, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  expand: 0
+  theObject: {fileID: 0}
+  scaleMod: 0
+  maxScaleMod: 0.2
 --- !u!1 &1618278343
 GameObject:
   m_ObjectHideFlags: 0
@@ -2349,7 +2570,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   expand: 0
-  button: {fileID: 1618278343}
+  theObject: {fileID: 0}
   scaleMod: 0
   maxScaleMod: 0.2
 --- !u!114 &1618278346
@@ -2484,6 +2705,7 @@ GameObject:
   - component: {fileID: 1926267708}
   - component: {fileID: 1926267710}
   - component: {fileID: 1926267709}
+  - component: {fileID: 1926267711}
   m_Layer: 5
   m_Name: Pirate1 (7)
   m_TagString: Untagged
@@ -2548,6 +2770,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1926267707}
   m_CullTransparentMesh: 1
+--- !u!114 &1926267711
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1926267707}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97535d415c9499943a39bd660c500160, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  expand: 0
+  theObject: {fileID: 0}
+  scaleMod: 0
+  maxScaleMod: 0.2
 --- !u!1 &1948547382
 GameObject:
   m_ObjectHideFlags: 0
@@ -2559,6 +2797,7 @@ GameObject:
   - component: {fileID: 1948547383}
   - component: {fileID: 1948547385}
   - component: {fileID: 1948547384}
+  - component: {fileID: 1948547386}
   m_Layer: 5
   m_Name: Pirate1 (2)
   m_TagString: Untagged
@@ -2623,6 +2862,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1948547382}
   m_CullTransparentMesh: 1
+--- !u!114 &1948547386
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1948547382}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97535d415c9499943a39bd660c500160, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  expand: 0
+  theObject: {fileID: 0}
+  scaleMod: 0
+  maxScaleMod: 0.2
 --- !u!1 &1958787433
 GameObject:
   m_ObjectHideFlags: 0
