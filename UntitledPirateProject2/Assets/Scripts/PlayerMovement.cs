@@ -31,6 +31,8 @@ public class PlayerMovement : MonoBehaviour
 
     private float moveSpeed;
 
+    public bool isMoving { get; private set; }
+
     private List<RaycastHit2D> castCollisions = new List<RaycastHit2D>();
 
     void Start()
@@ -52,10 +54,12 @@ public class PlayerMovement : MonoBehaviour
         // Do nothing if idle.
         if (movementInput == Vector2.zero) 
         {
+            isMoving = false;
             return;
         }
         // Allow for one directional movement if trying to move diagonally and there is something blocking one direction
-
+        
+        isMoving = true;
         bool success = TryMove(movementInput);  
 
         if (!success)

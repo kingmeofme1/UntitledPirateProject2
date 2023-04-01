@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.InputSystem;
 
 public class RuleManager : MonoBehaviour
 {
@@ -16,7 +17,9 @@ public class RuleManager : MonoBehaviour
     public List<string> stringsBarks;
     public List<string> stringsTaped;
 
-    public Transform playerTransform;
+    [SerializeField] private Transform playerTransform;
+    [SerializeField] private PlayerMovement playerMovement;
+    private Vector2 movementInput;
 
     public GameObject captain;
     public GameObject shoutObject;
@@ -32,10 +35,13 @@ public class RuleManager : MonoBehaviour
     public BoxCollider2D rightSideCollider;
     public List<OverlapObj> listMoney;
 
-    private Vector3 lastPlayerPosition;
-
     [SerializeField] float textUpMod = 50f;
     [SerializeField] float textWaveSpeed = 5f;
+
+    private void Start()
+    {
+        ResetRule();
+    }
 
     // Update is called once per frame
     void Update()
@@ -83,7 +89,11 @@ public class RuleManager : MonoBehaviour
     private IEnumerator AnnounceRule()
     {
         isAnnouncingRule = true;
+        shoutObjectText.color = Color.white;
+
         yield return new WaitForSeconds(delayBeforeRuleIsApplied);
+
+        shoutObjectText.color = Color.red;
         isAnnouncingRule = false;
     }
 
@@ -107,7 +117,6 @@ public class RuleManager : MonoBehaviour
                 rightSideCollider.gameObject.SetActive(true);
                 break;
             case (int)rule.ANTHEM:
-                lastPlayerPosition = playerTransform.position;
                 break;
         }
     }
@@ -144,10 +153,7 @@ public class RuleManager : MonoBehaviour
             switch (currentRule)
             {
                 case (int)rule.NO_RUN:
-                    if (!Input.GetKey(KeyCode.LeftShift))
-                    {
-                        playerBreakingRules = true;
-                    }
+                    CheckRuleWalking();
                     break;
                 case (int)rule.NO_LEFT:
                     CheckRuleLeftSide();
@@ -165,15 +171,21 @@ public class RuleManager : MonoBehaviour
         }
     }
 
-    private void CheckRuleAnthem()
+    private void CheckRuleWalking()
     {
-        if (lastPlayerPosition != playerTransform.position)
+        if (!Input.GetKey(KeyCode.LeftShift) && playerMovement.isMoving)
         {
-            Debug.Log("Player did not stay still for the anthem");
             playerBreakingRules = true;
         }
-        
-        lastPlayerPosition = playerTransform.position;
+    }
+
+    private void CheckRuleAnthem()
+    {
+        if (playerMovement.isMoving)
+        {
+            playerBreakingRules = true;
+        }
+       
     }
 
     private void CheckRuleLeftSide()

@@ -3860,7 +3860,7 @@ MonoBehaviour:
   - No Stealing!
   - fish
   - Don't go right!
-  - Sing Our Anthem!
+  - Stand straight for our anthem!
   stringsBarks:
   - bark1
   - bark2
@@ -3870,6 +3870,7 @@ MonoBehaviour:
   - '*MHMPG*'
   - '*HMMHM*'
   playerTransform: {fileID: 1460221827}
+  playerMovement: {fileID: 1460221826}
   captain: {fileID: 111676475}
   shoutObject: {fileID: 1076584937}
   shoutObjectText: {fileID: 1076584938}
