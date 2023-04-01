@@ -431,7 +431,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.82589847, y: 1.0607189}
+  m_Size: {x: 1.352453, y: 1.9741089}
   m_EdgeRadius: 0
 --- !u!222 &186924143
 CanvasRenderer:
@@ -3855,7 +3855,7 @@ MonoBehaviour:
   delayBeforeRuleIsApplied: 1
   timeToEscapeDuctTape: 2
   stringsRules:
-  - No Running!
+  - Walk!
   - Don't go left!
   - No Stealing!
   - fish
