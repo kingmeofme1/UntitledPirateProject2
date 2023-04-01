@@ -2,9 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class HoleManager : MonoBehaviour
 {
+    [SerializeField] private string sceneName;
     [SerializeField] private Slider waterSlider;
 
     [SerializeField] private Sprite holeLeaking;
@@ -45,10 +47,8 @@ public class HoleManager : MonoBehaviour
         {
             waterMeterPercentage += waterPercentagePerSecond * Time.deltaTime;
             waterSlider.value = waterMeterPercentage;
-            if (waterMeterPercentage >= 100) print("GAME OVER!");
+            if (waterMeterPercentage >= 100) SceneManager.LoadScene(sceneName);
         }
-
-        print(Mathf.Round(waterMeterPercentage));
     }
 
 
