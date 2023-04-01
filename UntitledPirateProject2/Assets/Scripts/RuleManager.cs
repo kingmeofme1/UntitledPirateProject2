@@ -44,10 +44,8 @@ public class RuleManager : MonoBehaviour
         {
             Shout();
         }
-        //Vector3 textPos = theCamera.WorldToScreenPoint(captain.transform.position);
-        //shoutObject.transform.SetPositionAndRotation(new Vector3(textPos.x + 3 * Mathf.Sin(textWaveSpeed * Time.time), textPos.y + textUpMod, textPos.z), Quaternion.identity);
 
-        if (!isCaptainTaped)
+        if (!isCaptainTaped && !isAnnouncingRule)
             CheckRuleBreaks();
     }
 
@@ -77,6 +75,8 @@ public class RuleManager : MonoBehaviour
         }
         currentRule = newRule;
 
+        InitializeRule();
+        Shout();
         StartCoroutine(nameof(AnnounceRule));
     }
 
@@ -85,9 +85,6 @@ public class RuleManager : MonoBehaviour
         isAnnouncingRule = true;
         yield return new WaitForSeconds(delayBeforeRuleIsApplied);
         isAnnouncingRule = false;
-        
-        InitializeRule();
-        Shout();
     }
 
     // -- Things that only need to be done once per rule are here.
@@ -101,6 +98,10 @@ public class RuleManager : MonoBehaviour
                  leftSideCollider.gameObject.SetActive(true);
                 break;
             case (int)rule.NO_MONEY:
+                foreach(OverlapObj money in listMoney)
+                {
+                    money.gameObject.SetActive(true);
+                }
                 break;
             case (int)rule.NO_RIGHT:
                 rightSideCollider.gameObject.SetActive(true);
@@ -122,6 +123,10 @@ public class RuleManager : MonoBehaviour
                 leftSideCollider.gameObject.SetActive(false);
                 break;
             case (int)rule.NO_MONEY:
+                foreach (OverlapObj money in listMoney)
+                {
+                    money.gameObject.SetActive(false);
+                }
                 moneyTriggered = false;
                 break;
             case (int)rule.NO_RIGHT:
