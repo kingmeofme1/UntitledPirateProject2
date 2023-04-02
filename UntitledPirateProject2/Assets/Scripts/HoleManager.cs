@@ -28,6 +28,8 @@ public class HoleManager : MonoBehaviour
     public ScoreManager scoreManager;
     public RuleManager ruleManager;
 
+    [SerializeField] private ParticleSystem holeFixedParticles;
+
     private void Start()
     {
         if(holeList != null && holeList.Count > 0)
@@ -59,6 +61,8 @@ public class HoleManager : MonoBehaviour
         if(holeID == activeHole && holeList[holeID].TryGetComponent(out SpriteRenderer spriteRenderer)) //check we fixed an actually broken hole
         {
             spriteRenderer.sprite = holeFixed;
+            holeFixedParticles.transform.position = spriteRenderer.transform.position;
+            holeFixedParticles.Play();
             isHoleLeaking = false;
 
             scoreManager.UpdateScore(1);
