@@ -75,7 +75,7 @@ public class CutScenePlayer : MonoBehaviour
         if(currentLine >= events.Count)
         {
             Debug.Log("endOfCutscene");
-            SceneManager.LoadScene("KingScene");
+            SceneManager.LoadScene("BeetScene");
             return;
         }
         if (events[currentLine] != null)

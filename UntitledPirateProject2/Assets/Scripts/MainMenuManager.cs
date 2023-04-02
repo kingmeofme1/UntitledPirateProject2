@@ -28,4 +28,9 @@ public class MainMenuManager : MonoBehaviour
     {
         SceneManager.LoadScene("Cutscene1Intro");
     }
+
+    public void QuitGame()
+    {
+        Application.Quit();
+    }
 }
