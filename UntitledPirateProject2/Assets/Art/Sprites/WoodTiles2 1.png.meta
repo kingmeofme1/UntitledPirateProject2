@@ -14,6 +14,30 @@ TextureImporter:
   - first:
       213: -3344821021152009435
     second: WoodTiles2_3
+  - first:
+      213: -3374674380487868165
+    second: WoodTiles2 1_0
+  - first:
+      213: -6578017122505086270
+    second: WoodTiles2 1_1
+  - first:
+      213: -5566807501084950986
+    second: WoodTiles2 1_2
+  - first:
+      213: 8442896398141816548
+    second: WoodTiles2 1_3
+  - first:
+      213: 6028678609017273595
+    second: WoodTiles2 1_4
+  - first:
+      213: -8493895167584427592
+    second: WoodTiles2 1_5
+  - first:
+      213: 3964567955825587258
+    second: WoodTiles2 1_6
+  - first:
+      213: 8548130076714456328
+    second: WoodTiles2 1_7
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -139,33 +163,12 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: WoodTiles2_0
+      name: WoodTiles2 1_0
       rect:
         serializedVersion: 2
         x: 0
         y: 23
         width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 97628a63db80f1870800000000000000
-      internalID: 8655646617588213369
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: WoodTiles2_1
-      rect:
-        serializedVersion: 2
-        x: 17
-        y: 23
-        width: 15
         height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -174,20 +177,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0af55067935bbe370800000000000000
-      internalID: 8352969192286543776
+      spriteID: bf0c86ed78fba21d0800000000000000
+      internalID: -3374674380487868165
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WoodTiles2_2
+      name: WoodTiles2 1_1
       rect:
         serializedVersion: 2
         x: 16
-        y: 10
+        y: 23
         width: 16
-        height: 12
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -195,20 +198,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: df355643b3d599a50800000000000000
-      internalID: 6528351643713754109
+      spriteID: 2caa5a6674036b4a0800000000000000
+      internalID: -6578017122505086270
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WoodTiles2_3
+      name: WoodTiles2 1_2
       rect:
         serializedVersion: 2
-        x: 0
-        y: 10
-        width: 15
-        height: 12
+        x: 32
+        y: 23
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -216,8 +219,113 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 523a9fcb00fc491d0800000000000000
-      internalID: -3344821021152009435
+      spriteID: 63ef9dc621abeb2b0800000000000000
+      internalID: -5566807501084950986
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WoodTiles2 1_3
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 23
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4eefaaeaa813b2570800000000000000
+      internalID: 8442896398141816548
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WoodTiles2 1_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 7
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bfc787be04b2aa350800000000000000
+      internalID: 6028678609017273595
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WoodTiles2 1_5
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 7
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b129b0095f9f1a80800000000000000
+      internalID: -8493895167584427592
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WoodTiles2 1_6
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 7
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3471e6fc89f40730800000000000000
+      internalID: 3964567955825587258
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WoodTiles2 1_7
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 7
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 805d56cc30f01a670800000000000000
+      internalID: 8548130076714456328
       vertices: []
       indices: 
       edges: []

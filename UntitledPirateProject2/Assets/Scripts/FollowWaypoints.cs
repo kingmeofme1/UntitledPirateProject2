@@ -55,7 +55,7 @@ public class FollowWaypoints : MonoBehaviour
         Gizmos.color = Color.red;
         for (int i = 0; i < waypoints.Length; i++)
         {
-            Gizmos.DrawSphere(waypoints[i], 1f);
+            Gizmos.DrawSphere(waypoints[i], 0.5f);
             if (i < waypoints.Length - 1)
                 Gizmos.DrawLine(waypoints[i], waypoints[i + 1]);
             else
