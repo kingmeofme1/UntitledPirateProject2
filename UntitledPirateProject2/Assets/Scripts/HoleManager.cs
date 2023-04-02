@@ -49,9 +49,12 @@ public class HoleManager : MonoBehaviour
         {
             waterMeterPercentage += waterPercentagePerSecond * Time.deltaTime;
             waterSlider.value = waterMeterPercentage;
-            print("Water meter: " + waterMeterPercentage);
 
-            if (waterMeterPercentage >= 100) gameOverMenu.SetActive(true);
+            if (waterMeterPercentage >= 100)
+            {
+                Time.timeScale = 0;
+                gameOverMenu.SetActive(true);
+            }
         }
     }
 
