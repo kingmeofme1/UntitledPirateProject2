@@ -1495,6 +1495,8 @@ MonoBehaviour:
   - 'PATRICK: For real?'
   - 'CAPTAIN: This ship isn''t made of money. Make it work or it''s the plank. Better
     hurry, but don''t run!'
+  - Tape the captain with 'E' when close, tape the holes with 'SPACE', and walk with
+    'SHIFT'
   dialogueAudioList: []
   currentLine: 0
   currentChar: 0
@@ -1507,6 +1509,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 2086994113}
   - {fileID: 1405524508}
+  - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
 --- !u!4 &1005108037
