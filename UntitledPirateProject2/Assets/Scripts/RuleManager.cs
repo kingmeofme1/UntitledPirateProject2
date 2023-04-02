@@ -21,6 +21,7 @@ public class RuleManager : MonoBehaviour
     public List<AudioSource> audiosBarks;
     public List<AudioSource> audiosTaped; //unimplemented
     public bool wasAudioPlayed = false;
+    public AudioSource captainTaped;
 
 
     [SerializeField] private Transform playerTransform;
@@ -67,6 +68,7 @@ public class RuleManager : MonoBehaviour
     public void TapeCaptain()
     {
         print("TAPED!");
+        captainTaped.Play();
         isCaptainTaped = true;
         StartCoroutine(nameof(EscapeDuctTape));
     }

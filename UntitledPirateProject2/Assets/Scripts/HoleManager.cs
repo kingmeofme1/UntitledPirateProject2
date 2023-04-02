@@ -28,6 +28,9 @@ public class HoleManager : MonoBehaviour
     public ScoreManager scoreManager;
     public RuleManager ruleManager;
 
+    public AudioSource newHoleSound;
+    public AudioSource holeTapedSound;
+
     [SerializeField] private ParticleSystem holeFixedParticles;
 
     private void Start()
@@ -64,6 +67,7 @@ public class HoleManager : MonoBehaviour
         if(holeID == activeHole && holeList[holeID].TryGetComponent(out SpriteRenderer spriteRenderer)) //check we fixed an actually broken hole
         {
             spriteRenderer.sprite = holeFixed;
+            holeTapedSound.Play();
             if (holeFixedParticles != null)
             {
                 holeFixedParticles.transform.position = spriteRenderer.transform.position;
@@ -96,6 +100,7 @@ public class HoleManager : MonoBehaviour
     {
         if(holeList[activeHole].TryGetComponent(out SpriteRenderer spriteRenderer))
         {
+            
             activeHoleSprite = spriteRenderer;
             spriteRenderer.sprite = holeWarning;
             StartCoroutine(nameof(DelayBeforeLeak));
@@ -106,6 +111,7 @@ public class HoleManager : MonoBehaviour
     {
         yield return new WaitForSeconds(timeBeforeLeak);
         activeHoleSprite.sprite = holeLeaking;
+        newHoleSound.Play();
         isHoleLeaking = true;
     }
 
