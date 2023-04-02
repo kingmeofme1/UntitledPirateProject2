@@ -118,11 +118,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4dac9df2d8b206545898314c71d9b00e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 5
+  moveSpeed: 3.5
   waypointPause: 2
   waypoints:
+  - {x: -11, y: -7}
   - {x: -11, y: 3}
-  - {x: -11, y: -3}
   spriteRenderer: {fileID: 3170398778695783489}
   sprites:
   - {fileID: 1158996290619061236, guid: 3c903fbfb43256946ad291f9fe3effad, type: 3}

@@ -1387,26 +1387,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3170398778695783487, guid: 518def0ade905034cb681bd68e189bb6, type: 3}
-      propertyPath: gizmoColor.b
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3170398778695783487, guid: 518def0ade905034cb681bd68e189bb6, type: 3}
-      propertyPath: gizmoColor.g
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3170398778695783487, guid: 518def0ade905034cb681bd68e189bb6, type: 3}
-      propertyPath: gizmoColor.r
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3170398778695783487, guid: 518def0ade905034cb681bd68e189bb6, type: 3}
-      propertyPath: waypoints.Array.data[0].y
-      value: -7
-      objectReference: {fileID: 0}
-    - target: {fileID: 3170398778695783487, guid: 518def0ade905034cb681bd68e189bb6, type: 3}
-      propertyPath: waypoints.Array.data[1].y
-      value: 3
-      objectReference: {fileID: 0}
     - target: {fileID: 3170398778695783488, guid: 518def0ade905034cb681bd68e189bb6, type: 3}
       propertyPath: player
       value: 

@@ -11,10 +11,12 @@ public class PirateGoon : MonoBehaviour
 
     public FollowWaypoints waypointScript;
 
+    private Collider2D chaseCollider;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        chaseCollider = GetComponent<Collider2D>();
     }
 
     // Update is called once per frame
@@ -22,6 +24,7 @@ public class PirateGoon : MonoBehaviour
     {
         if (ruleManager.IsRulesBroken())
         {
+            chaseCollider.enabled = true;
             waypointScript.enabled = false;
             Vector2 direction = player.transform.position - transform.position;
             transform.position += (Vector3)(direction.normalized * waypointScript.GetMoveSpeed() * Time.deltaTime);
@@ -30,6 +33,7 @@ public class PirateGoon : MonoBehaviour
         }
         else
         {
+            chaseCollider.enabled = false;
             waypointScript.enabled = true; //this puts them back on patrol
         }
         
