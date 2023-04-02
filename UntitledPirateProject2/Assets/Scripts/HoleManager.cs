@@ -30,6 +30,8 @@ public class HoleManager : MonoBehaviour
 
     public AudioSource newHoleSound;
     public AudioSource holeTapedSound;
+    public AudioSource victorySound;
+    public AudioSource defeatSound;
 
     [SerializeField] private ParticleSystem holeFixedParticles;
 
@@ -55,8 +57,11 @@ public class HoleManager : MonoBehaviour
 
             if (waterMeterPercentage >= 100)
             {
+                ruleManager.KillAllAudio();
+                PlayFanfare();
                 Time.timeScale = 0;
                 gameOverMenu.SetActive(true);
+                isHoleLeaking = false;
             }
         }
     }
@@ -113,6 +118,18 @@ public class HoleManager : MonoBehaviour
         activeHoleSprite.sprite = holeLeaking;
         newHoleSound.Play();
         isHoleLeaking = true;
+    }
+
+    public void PlayFanfare()
+    {
+        if (scoreManager.IsHighScore())
+        {
+            victorySound.Play();
+        }
+        else
+        {
+            defeatSound.Play();
+        }
     }
 
     

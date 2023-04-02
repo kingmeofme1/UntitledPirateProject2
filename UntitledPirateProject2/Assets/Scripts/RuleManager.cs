@@ -323,4 +323,12 @@ public class RuleManager : MonoBehaviour
 
     public enum rule { NO_RUN = 0, NO_LEFT = 1, NO_MONEY = 2, NO_FISH = 3, NO_RIGHT = 4, ANTHEM = 5}
     
+
+    public void KillAllAudio()
+    {
+        for(int i = 0; i < audiosBarks.Count; i++)
+        {
+            audiosBarks[i].Stop();
+        }
+    }
 }
