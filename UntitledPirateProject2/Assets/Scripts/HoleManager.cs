@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class HoleManager : MonoBehaviour
 {
-    [SerializeField] private string sceneName;
+    [SerializeField] private GameObject gameOverMenu;
     [SerializeField] private Slider waterSlider;
 
     [SerializeField] private Sprite holeLeaking;
@@ -47,8 +47,9 @@ public class HoleManager : MonoBehaviour
         {
             waterMeterPercentage += waterPercentagePerSecond * Time.deltaTime;
             waterSlider.value = waterMeterPercentage;
+            print("Water meter: " + waterMeterPercentage);
 
-            if (waterMeterPercentage >= 100) SceneManager.LoadScene(sceneName);
+            if (waterMeterPercentage >= 100) gameOverMenu.SetActive(true);
         }
     }
 
