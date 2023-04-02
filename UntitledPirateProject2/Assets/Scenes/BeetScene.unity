@@ -19014,6 +19014,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shoutDelay: 0.5
+  shoutTextColor: {r: 0.4339623, g: 0.035481166, b: 0.035481166, a: 1}
   delayBeforeRuleIsApplied: 1
   timeToEscapeDuctTape: 2
   stringsRules:

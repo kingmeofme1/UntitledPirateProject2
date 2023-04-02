@@ -9,6 +9,7 @@ public class RuleManager : MonoBehaviour
     public float shoutDelay = 5.0f; //in seconds
     private float timeOfLastShout = -10f; //just means we immediately get a shout
     private bool isAnnouncingRule;
+    [SerializeField] private Color shoutTextColor;
     [SerializeField] private float delayBeforeRuleIsApplied;
 
     private int currentRule = 0;
@@ -102,7 +103,7 @@ public class RuleManager : MonoBehaviour
         yield return new WaitForSeconds(delayBeforeRuleIsApplied);
 
         ruleStartTime = Time.time;
-        shoutObjectText.color = Color.red;
+        shoutObjectText.color = shoutTextColor;
         isAnnouncingRule = false;
     }
 
