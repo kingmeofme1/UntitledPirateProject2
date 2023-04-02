@@ -61,8 +61,11 @@ public class HoleManager : MonoBehaviour
         if(holeID == activeHole && holeList[holeID].TryGetComponent(out SpriteRenderer spriteRenderer)) //check we fixed an actually broken hole
         {
             spriteRenderer.sprite = holeFixed;
-            holeFixedParticles.transform.position = spriteRenderer.transform.position;
-            holeFixedParticles.Play();
+            if (holeFixedParticles != null)
+            {
+                holeFixedParticles.transform.position = spriteRenderer.transform.position;
+                holeFixedParticles.Play();
+            }
             isHoleLeaking = false;
 
             scoreManager.UpdateScore(1);

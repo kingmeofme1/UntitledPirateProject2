@@ -33,12 +33,15 @@ public class RuleManager : MonoBehaviour
 
     private bool playerBreakingRules;
     private bool isCaptainTaped;
+    private float ruleStartTime;
 
     [Header("Rule-specific")]
     private bool moneyTriggered = false;
     public BoxCollider2D leftSideCollider;
     public BoxCollider2D rightSideCollider;
     public List<OverlapObj> listMoney;
+    public float anthemDuration;
+    public GameObject musicNotes;
 
     [SerializeField] float textUpMod = 50f;
     [SerializeField] float textWaveSpeed = 5f;
@@ -98,6 +101,7 @@ public class RuleManager : MonoBehaviour
 
         yield return new WaitForSeconds(delayBeforeRuleIsApplied);
 
+        ruleStartTime = Time.time;
         shoutObjectText.color = Color.red;
         isAnnouncingRule = false;
     }
@@ -147,6 +151,8 @@ public class RuleManager : MonoBehaviour
                 rightSideCollider.gameObject.SetActive(false);
                 break;
             case (int)rule.ANTHEM:
+                print("Deactivating.");
+                musicNotes.SetActive(false);
                 break;
         }
     }
@@ -186,11 +192,20 @@ public class RuleManager : MonoBehaviour
 
     private void CheckRuleAnthem()
     {
-        if (playerMovement.isMoving)
+        if(Time.time >= ruleStartTime + anthemDuration)
+        {
+            ResetRule();
+            return;
+        }
+
+        if (Input.GetKey(KeyCode.Space))
+        {
+            musicNotes.SetActive(true);
+        }
+        else
         {
             playerBreakingRules = true;
         }
-       
     }
 
     private void CheckRuleLeftSide()
