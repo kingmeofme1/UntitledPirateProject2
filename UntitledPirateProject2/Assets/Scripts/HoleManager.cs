@@ -33,6 +33,7 @@ public class HoleManager : MonoBehaviour
     public AudioSource victorySound;
     public AudioSource defeatSound;
 
+
     [SerializeField] private ParticleSystem holeFixedParticles;
 
     private void Start()
@@ -130,7 +131,5 @@ public class HoleManager : MonoBehaviour
         {
             defeatSound.Play();
         }
-    }
-
-    
+    }    
 }
